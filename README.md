@@ -28,41 +28,12 @@ RegisterNumber:25018432
 */
 
 ```
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 
-# Load CSV'
-data = pd.read_csv(r"C:\Users\acer\Desktop\data.csv")
-
-x = data["X"].values.astype(float)
-y = data["Y"].values.astype(float)
-
-# Parameters
-w, b = 0.0, 0.0
-alpha = 0.01
-n = len(x)
-
-# Gradient Descent
-for _ in range(100):
-    y_pred = w*x + b
-    dw = (2/n)*np.sum((y_pred-y)*x)
-    db = (2/n)*np.sum(y_pred-y)
-    w -= alpha*dw
-    b -= alpha*db
-
-# Plot
-plt.scatter(x,y)
-plt.plot(x, w*x+b)
-plt.show()
-
-print("w =", w)
-print("b =", b)
 ```
 
 ## Output:
 
-<img width="484" height="334" alt="Screenshot 2026-01-30 200934" src="https://github.com/user-attachments/assets/db86ef74-a098-41d5-8989-b8d6e2a500af" />
+
 
 ## Result:
 
